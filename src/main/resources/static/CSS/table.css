@@ -1,0 +1,59 @@
+body{
+font-family: 'Work Sans', sans-serif;
+}
+.main-container{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+
+}
+table{
+  border-collapse: collapse;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+
+ a{
+  text-decoration: none;
+  color:#1d62d9;
+}
+table th{
+  font-size:2rem;
+  padding:10px;
+  color:white;
+  background: #1d62d9;
+  border:1px solid lightgrey;
+
+}
+table td{
+  font-size: 1.2rem;
+  border:1px solid lightgrey;
+
+  padding:10px;
+}
+tr{
+  transition:.2s;
+}
+tr:hover{
+  background: #f8f8f8;
+  border-bottom:3px solid #1d62d9;
+  transform: scale(1.01);
+}
+
+#btn{
+margin-top:20px;
+padding:16px;
+width:180px;
+border:none;
+font-size:16px;
+letter-spacing:0.5px;
+border-radius:2px;
+font-weight: bold;
+background: #2b5fbb;
+color:white;
+transition:.25;
+}
+#btn:hover{
+
+  background: #1d62d9;
+}

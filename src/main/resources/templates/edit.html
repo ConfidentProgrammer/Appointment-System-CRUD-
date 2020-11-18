@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="style.css" th:href="@{/CSS/style.css}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<h1 class="heading">Edit Your Appointment</h1>
+
+
+
+ <form th:action="@{/modify}" th:object="${appointment}">
+<div class="main-container">
+
+  <input type="hidden" name="id" th:value="*{id}"/><br>
+<div class="name">
+<input class="all-input" type="text"  required=required th:field="*{firstName}" th:value="*{firstName}"/><br>
+  </div>
+<div class="email">
+  <input class="all-input" type="text" required=required th:field="*{email}" th:value="*{email}"/><br>
+  </div>
+<div class="appointment-date">
+<input type="date" class="all-input" required=required th:field="*{appointmentDate}" th:value="*{appointmentDate}"/><br>
+  </div>
+<div class="appointment-time">
+<input class="all-input" type="time" required=required th:field="*{appointmentTime}" th:value="*{appointmentTime}"/><br>
+  </div>
+  <div class="submit-button">
+  <input class="btn" type="submit" value="Modify Appointment"/>
+  </div>
+</div>
+</form>
+</body>
+</html>

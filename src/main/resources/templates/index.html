@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Appointment System</title>
+<link href="style.css" th:href="@{/CSS/style.css}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1 class="heading">Book Your Appointment</h1>
+<div class="outer">
+
+
+<div class="main-container">
+<form th:action="@{/}" th:method="post" th:object="${appointment}">
+
+
+
+<div class="name">
+   <input class="all-input" autocomplete="off" required="required" type="text" placeholder="Name" th:field="*{firstName}">
+
+</div>
+<div class="email">
+   <input class="all-input" autocomplete="off"  required="required" type="text" placeholder="Email" th:field="*{email}">
+
+</div>
+<div class="appointment-date">
+   <input class="all-input" type="date" placeholder="Date" autocomplete="off"  required="required" th:field="*{appointmentDate}">
+
+</div>
+<div class="appointment-time">
+   <input class="all-input" type="time" placeholder="Time" th:field="*{appointmentTime}" autocomplete="off"  required="required">
+
+</div>
+
+<div class="submit-button">
+  <input class="btn" type="submit" value="Add Appointment">
+</div>
+
+</form>
+
+
+</div>
+
+
+</div>
+<div class="view-all">
+  <a th:href="@{/view}"> <input id="btn" class="btn" type="submit" value="View All Bookings"></a>
+
+</div>
+
+<script src="../Javascript/script.js"></script>
+
+</body>
+</html>

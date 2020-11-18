@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Booking Information</title>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+</head>
+<link rel="stylesheet" href="../CSS/table.css">
+<body>
+
+<div class="main-container">
+
+
+<table border="1">
+
+<tr>
+<th>Operations</th>
+<th>ID</th>
+<th>FirstName</th>
+<th>Email</th>
+<th>Date</th>
+<th>Time</th>
+</tr>
+
+<tr th:each="s : ${appointment}">
+<td>
+<a href="" th:href="@{/delete/{id}(id=${s.id})}">DELETE</a> &nbsp;
+<a href="" th:href="@{/edit/{id}(id=${s.id})}">EDIT</a>
+</td>
+
+<td th:text="${s.id}"></td>
+<td th:text="${s.firstName}"></td>
+<td th:text="${s.email}"></td>
+<td th:text="${s.appointmentDate}"></td>
+<td th:text="${s.appointmentTime}"></td>
+<tr>
+
+</table>
+
+  <a th:href="@{/}"> <input id="btn" class="btn" type="submit" value="Add a booking"></a>
+
+
+
+</div>
+</body>
+</html>
